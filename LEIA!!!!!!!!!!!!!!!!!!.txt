@@ -1,0 +1,21 @@
+
+Professora, antes de iniciar para testar o programa, você deve atualizar a porta para a do seu computador!
+
+E para criar o banco de dados o codigo abaixo:
+
+create database empresa;
+use empresa;
+
+
+create table departamento (
+    id int primary key auto_increment,
+    nome varchar(100)
+);
+
+create table funcionario (
+    id int primary key auto_increment,
+    nome varchar(100),
+    email varchar(100),
+    departamentoId int,
+    FOREIGN KEY  (departamentoId) REFERENCES departamento (id)
+);
